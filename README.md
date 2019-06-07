@@ -9,7 +9,8 @@
 * 3.在spring.c编写利用gnuplot的绘图代码，绘制数据的分布点图和线性拟合直线图。
 * 4.之前已经安装过git，利用老师给的参考步骤，在Bonus文件夹下，打开终端，进行了本地Git和远程Github版本控制的初始化。在之前注册的github账号下建立新的repository--Bonus。
 * 5.对git进行版本控制，然后把Bonus同步更新到我的github上。
-   [my github address](https://github.com/Dongnanlavine)
-    ! [my github ](./img/Dongnanlavine_github.png)
+     
+     [my github address](https://github.com/Dongnanlavine)
+     ![my github ](./img/Dongnanlavine_github.png)
 
 
