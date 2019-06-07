@@ -1,6 +1,4 @@
-**我还没有装unix系统，所以暂时是在Windows系统下做的。**
-
-我所做的工作如下：
+**我所做的工作如下：**
 
 * 1.在VS里面编程，用C语言读取了spring_data.csv文件，然后用gsl_fit_linear对数据进行了线性回归的处理。
       ![读取csv数据，并进行拟合](./img/makefile.png)
