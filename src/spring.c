@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 void get_two_dimension(char* line, double** data, char *filename);
 void print_two_dimension(double** data, int row, int col);
 int get_row(char *filename);
@@ -10,7 +11,7 @@ int get_col(char *filename);
 
 int main()
 {
-    char filename[] = "E:\\courseSE\\Practices\\Practices-S2019\\Bonus\\data\\spring_data.csv";
+    char filename[] = "./data/spring_data.csv"; 
     char line[1024];
     double **data;
     int row, col;
@@ -27,7 +28,7 @@ int main()
 
     double c0, c1, cov00, cov01, cov11, sumsq;
     
-    int n=19;
+    //int n=19;
     double dis[19];
     double mas[19];
     for(int i=0; i<row-1; i++)
@@ -38,7 +39,7 @@ int main()
        printf("%lf\n",dis[i]);
     }
     
-    gsl_fit_linear (mas,1,dis,1,n, &c0, &c1, &cov00, &cov01, &cov11, &sumsq);
+    gsl_fit_linear (mas,1,dis,1,row-1 , &c0, &c1, &cov00, &cov01, &cov11, &sumsq);
     
     printf ("best fit: Y = %g + %g X\n", c0, c1);
     printf ("covariance matrix:\n");
@@ -63,7 +64,7 @@ int main()
                          '-' title 'Fit Line' with  linespoints  pt  6 lc rgb 'red'\n");
      
      // 2 followed by data points: <x,y>
-     for (int i = 0; i < n; i++)
+     for (int i = 0; i < row-1; i++)
      {
         fprintf(pipe, "%lf %lf\n", mas[i], dis[i]);
      }
@@ -73,7 +74,7 @@ int main()
      // linear fit
      fprintf(pipe,"\n"); // start a new draw item
      fprintf(pipe, "%lf %lf\n", 0.0, c0+c1*0,0);
-     for (int i = 0; i < n; i++)
+     for (int i = 0; i < row-1; i++)
      {
         fprintf(pipe, "%lf %lf\n", mas[i], c0+c1*mas[i]);
      }
