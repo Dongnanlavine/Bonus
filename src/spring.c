@@ -73,7 +73,7 @@ int main()
      
      // linear fit
      fprintf(pipe,"\n"); // start a new draw item
-     fprintf(pipe, "%lf %lf\n", 0.0, c0+c1*0,0);
+     fprintf(pipe, "%lf %lf\n", 0.0, c0+c1*0);
      for (int i = 0; i < row-1; i++)
      {
         fprintf(pipe, "%lf %lf\n", mas[i], c0+c1*mas[i]);
